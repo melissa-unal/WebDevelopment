@@ -1,0 +1,111 @@
+<header>
+    <h1 style="font-size:35px;">
+        <span class="a">
+            <br><br><i lang="en">Minstrel's Stream</i>
+        </span>
+
+        <span class="a" style="font-size:35px;">
+            <br><i lang="en">Keep music culture alive</i>
+            <br><br><br><br>
+        </span>
+    </h1>
+
+    <!--
+    <nav>
+        <ul>
+            <li><a href="#despre_noi">Cine suntem?</a></li>
+            <li><a href="#ce_ne_propunem">Ce ne propunem?</a></li>
+            <li><a href="#cum_functioneaza">Cum functioneaza?</a></li>
+            <li><a href="#tabel">Popularitatea artistilor</a></li>
+            <li><a href="file:///C:/Users/Mellie/Desktop/proiect/galerie-statica.html">Galerie Statica</a></li>
+        </ul>
+    </nav>-->
+
+
+    <nav id="aaa">
+        <label id="hamburger" for="ch-menu">
+            <img src="imagini_continut/hamburger.png" alt="menu">
+        </label>
+
+        <input id="ch-menu" type="checkbox">
+
+
+
+        <ul class="menu">
+            
+            <li id="casuta" class="shadow"><a href="index.ejs"><i class="fas fa-home"></i></a></li>
+            <li id="casuta_acasa" class="shadow"><a href="index.ejs"><i class="fas fa-home"></i> Acasa</a></li>
+            <li class="shadow"><a href="index.ejs#despre_noi">Despre noi</a></li>
+
+            <li>
+                
+                <label id="nu" for="afla">
+                    Afla mai multe
+                    
+                </label>
+
+                <input class="ch-submenu" type="checkbox" id=afla>
+                <ul class="submenu">
+                   
+                    <li><a href="index.ejs#ce_ne_propunem">Ce ne propunem?</a></li>
+                    <li><a href="index.ejs#cum_functioneaza">Cum functioneaza?</a></li>
+                </ul>
+            </li>
+
+            <li class="shadow"><a href="inregistrare_user">Inregistrare</a></li>
+            <li>
+                <label id="nu" for="opt_galerii">
+                    Galerii
+                </label>
+
+                <input class="ch-submenu" type="checkbox" id="opt_galerii">
+                <ul class="submenu">
+                    <li id="nu"><a href="galerie-statica">Statica</a></li>
+                    <li id="nu"><a href="galerie-animata">Animatie</a></li>
+                </ul>
+            </li>
+            <li class="shadow"><a href="produse">Produse</a></li>
+            <li class="shadow" style="float:right"><button onclick="f()" id="toggle_body_background" class="far fa-sun"></button></li>
+            <li class="shadow"><a href="useri">Useri</a></li>
+
+        </ul>
+    </nav>
+
+    <% if (!locals.utilizator) {%>
+            
+		<p>Va rugam sa va logati: <br/>
+		<form id="login" method="post" action="/login">
+			
+			<label>
+				Username: <input type="text" name="username" value="">
+			</label>
+			<label>
+				Parola: <input type="password" name="parola" value="">
+			</label>
+			
+            <input type="submit" value="Submit">
+		</form>
+    <% } 
+        //aici vine else-ul
+        
+    
+
+     if (locals.utilizator) { %>
+        <p>User: <a href="/index" title = "<%= locals.utilizator.nume %> <%= locals.utilizator.prenume %>"><%=locals.utilizator.username%></a></p>
+        <div><img alt="User's image" width="100" height="100" src= "<%= utilizator.cale_imagine %>"></div>
+        <form id="logout" method="get" action="/logout">
+        <input type="submit" value="Logout">
+        </form>
+        <% } %>
+
+    
+    <p> <%- (locals.raspuns?locals.raspuns:"")%> </p>
+    <p> <%- (locals.err?locals.err:"")%> </p>
+        
+
+<script src="scripturi/script.js"></script>
+
+
+
+
+</header>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<title>Utilizatori</title>
+
+
+    <%- include("../fragments/head") %>
+
+</head>
+<body class="container">
+
+<header>
+    <%- include("../fragments/header") %>
+</header>
+
+<main>
+    <div class="afisaj">
+        <h1>Useri</h1>
+
+		<table id="profesori">
+		  <tr>
+			<th>id</th><th>username</th><th>Nume</th><th>Prenume</th><th>Blocat</th>
+		  </tr>
+
+		  <% for (var i = 0; i < useri.length; i++) { 
+				if(useri[i].rol=="comun"){
+				%>
+				<tr>
+				  <td><%= useri[i].id %></td>
+				  <td><%= useri[i].username %></td>
+				  <td><%= useri[i].nume %></td>
+				  <td><%= useri[i].prenume %></td>
+				  <td><%= useri[i].blocat %></td>
+				  <td>
+				<form action="/block_user" method="post">
+					<input type="hidden" name="id" value="<%= useri[i].id %>">
+					<input type="hidden" name="username" value="<%= useri[i].username %>">
+					<input type="hidden" name="prenume" value="<%= useri[i].prenume %>">
+					<input type="hidden" name="nume" value="<%= useri[i].nume %>">
+					<input type="hidden" name="email" value="<%= useri[i].email %>">
+					<input id = "buton_block" type="submit" value="Blocheaza user">		
+				</form>	
+				</td>
+				<td>
+				<form action="/unblock_user" method="post">
+					<input type="hidden" name="id" value="<%= useri[i].id %>">
+					<input type="submit" value="Delocheaza user">		
+				</form>	
+				</td>
+				</tr> 
+   
+				<% } %>			
+		  <% } %>
+		</table>
+	</div>
+</main>
+
+<footer>
+    <%- include("../fragments/footer") %>
+</footer>
+
+</body>
+</html>

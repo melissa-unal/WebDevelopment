@@ -1,0 +1,137 @@
+  #statica1
+  {
+    display: block;
+  }
+
+  #statica2
+  {
+     display: block;
+   }
+
+   #statica3
+ {
+    display: block;
+  }
+
+
+
+
+  nav{
+    z-index:100;
+  }
+
+  #hamburger
+  {
+    display:block;
+  }
+
+  ul.menu{
+    display:none;  
+  }
+  .shadow
+  {
+    text-shadow: none;
+  }
+  #ch-menu:checked~ul.menu
+  {
+    display:block;  
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    animation-duration:0.3s;
+    animation-name:letter_spacing;
+  }
+
+
+
+  @keyframes letter_spacing
+  {
+    0%{letter-spacing: -8px;}
+    100%{letter-spacing: 3px;}
+  }
+  ul.menu>li
+  {
+    width:100%;
+    background:black;
+  }
+  
+  ul.menu>li>ul.submenu
+  {
+    width:100%;
+    background: black;
+  }
+
+  #casuta_acasa
+  {
+    display:none;
+  }
+
+  #casuta
+  {
+    display: block;
+  }
+
+  #galerie_animata
+{
+  display: none;
+}
+
+
+#galerie_statica img:hover
+{
+  border-radius: 0%;
+  transform: none;
+}
+
+
+
+#bannerr
+{
+  animation: none;
+}
+
+
+
+.main_index
+{
+  /*box-shadow: inset lightgray 0px 0px 10px;*/
+    padding-right: 0;
+    padding-left: 0;
+   /* background: white;*/
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(1,300px);
+    grid-template-areas: "gr-sectiunea1_img"
+                         "gr-sectiunea1" 
+                         "gr-sectiunea2_img"
+                         "gr-sectiunea2"
+                         "gr-sectiunea3_img"
+                         "gr-sectiunea3"
+                         "gr-sectiunea4"
+                         "gr-sectiunea5"
+                         "gr-sectiunea6";
+}
+
+#sectiunea4
+{
+  margin-left: 125px;
+}
+
+.vid_mic
+{
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+}
+
+#sectiunea6
+{
+  margin-left: auto;
+}
+
+.scrollit 
+{
+  overflow:scroll;
+  width: 200px;
+  height: 200px;
+}
+

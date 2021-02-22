@@ -1,0 +1,106 @@
+/*galerie animata css*/
+
+*{
+    margin:0;
+    padding:0;
+    }
+    
+    body{
+      padding:3rem;
+    }
+
+    #galerie_animata
+    {
+        margin: auto;
+    }
+    .galerie{
+      width:500px;
+      height:500px;
+      position:relative;
+      overflow:hidden;
+      border: 10px solid transparent;
+      border-image: url("../galerie_animata/border.png") 100 round;
+      
+      margin-bottom:5rem;
+    }
+    .galerie figcaption{
+      position:absolute;
+      bottom:0;
+      background:rgba(255,255,255,0.7);
+      width:100%;
+      text-align:center;
+    }
+    .galerie figure{
+      position:relative;
+      width:500px;
+      height:500px;
+    }
+    
+    
+    #galerie_animata figure{	
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:0;
+      animation-name:gal_exemplu;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite;
+      animation-fill-mode:forwards;
+      animation-duration:21s;	
+      transform-origin:0px center;
+    }
+
+    #galerie_animata figure:nth-of-type(11){
+        animation-delay:0s;
+      }
+
+    #galerie_animata figure:nth-of-type(10){
+        animation-delay:2s;
+      }
+    #galerie_animata figure:nth-of-type(9){
+        animation-delay:4s;
+      }
+    #galerie_animata figure:nth-of-type(8){
+        animation-delay:6s;
+      }
+
+    #galerie_animata figure:nth-of-type(7){
+      animation-delay:8s;
+    }
+    #galerie_animata figure:nth-of-type(6){
+      animation-delay:10s;
+    }
+    #galerie_animata figure:nth-of-type(5){
+      animation-delay:12s;
+    }
+    #galerie_animata figure:nth-of-type(4){
+      animation-delay:14s;
+    }
+    #galerie_animata figure:nth-of-type(3){
+      animation-delay:16s;
+    }
+    #galerie_animata figure:nth-of-type(2){
+      animation-delay:18s;
+    }
+    #galerie_animata figure:nth-of-type(1){
+      animation-delay:20s;
+    }
+   
+    
+    @keyframes gal_exemplu{
+        0% {z-index:10;opacity:1;} 
+        4% {transform:scaleY(1);}
+        7%{opacity:1;transform:scaleY(0.3) rotate(0deg);} 
+    
+        9.0908%{z-index:10;opacity:0;transform:scaleY(0.3) rotate(90deg);}
+        9.0909%{z-index:-10; transform:scaleY(0) rotate(90deg);}
+    
+        90.9090%{opacity:0;}
+        90.9091%{opacity:0;transform:rotate(0deg);z-index:-10;}
+        90.9092%{z-index:0;}
+        100%{opacity:1;z-index:0;}
+    }
+    
+    #galerie_animata figure:hover{
+        animation-play-state: paused;}
+    

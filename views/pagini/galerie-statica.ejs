@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+    
+
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <meta name="keywords" content="compozitorii, melodii, clasica, artist">
+    <meta name="description" content="Galerie statica cu instrumente muzicale">
+    <meta name="author" content="Unal Melissa">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/style_700.css" type="text/css" media="screen and (max-width: 700px) and (min-width: 551px)" />
+    <link rel="stylesheet" href="CSS/style_400.css" type="text/css" media="screen and (max-width: 550px)" />
+    <link rel="stylesheet" href="CSS/index.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Caladea" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon1.ico" />
+
+    <title>
+        Galerie Statica
+    </title>
+
+
+    <script>
+        function f()
+        {
+          document.body.className= (document.body.className=="light") ? "dark" : "light";
+          var buton_background = document.getElementById("toggle_body_background");
+
+          if (buton_background.classList.contains("fa-sun"))
+          {
+            buton_background.classList.remove("fa-sun");
+            buton_background.classList.add("fa-moon");
+            return;
+          }
+          if (buton_background.classList.contains("fa-moon"))
+          {
+            buton_background.classList.remove("fa-moon");
+            buton_background.classList.add("fa-sun");
+            return;
+          }
+
+          if(document.body.className=="dark")
+          {
+              localStorage.setItem("theme", "dark");
+          }
+          else
+          {
+              localStorage.setItem("theme","light");
+          }
+
+        }
+
+        function checkTheme(){
+			const localStorageTheme = localStorage.getItem("theme");
+
+			if (localStorageTheme != null && localStorageTheme == "dark"){
+				document.body.className = localStorageTheme;
+			}
+			if (localStorageTheme != null && localStorageTheme == "light"){
+				document.body.className = localStorageTheme;
+			}
+		}
+
+		checkTheme();
+    </script>
+
+    </head>
+<body>
+    <%- include("../fragments/header.ejs")%>
+    <section id="galerie_statica">
+        <h2 style="text-align: center;">Galerie Statica</h2>
+
+        <div id="statica1">
+            <div>
+            <figure>
+                <img class="animatie" src="galerie/cello.jpg" alt="Cello">
+                <figcaption>Cello</figcaption>
+            </figure>
+            </div>
+
+            <div>
+            <figure>
+                <img class="animatie" src="galerie/clarinet.jpg" alt="Clarinet">
+                <figcaption>Clarinet</figcaption>
+            </figure>
+            </div>
+
+            <div>
+            <figure class="o-treime">
+                <img class="animatie" src="galerie/double_bass.jpg" alt="Bass">
+                <figcaption>Bass</figcaption>
+            </figure>
+            </div>
+        </div>
+
+
+
+        <div id="statica2">
+            <div>
+            <figure>
+                <img class="animatie" src="galerie/drums.jpg" alt="Drums">
+                <figcaption>Drums</figcaption>
+            </figure>
+            </div>
+
+            <div>
+            <figure>
+                <img class="animatie" src="galerie/flute.jpg" alt="Flute">
+                <figcaption>Flute</figcaption>
+            </figure>
+            </div>
+
+            <div>
+            <figure class="o-treime">
+                <img class="animatie" src="galerie/harp.jpg" alt="Harp">
+                <figcaption>Harp</figcaption>
+            </figure>
+            </div>
+        </div>
+
+
+        <div id="statica3">
+            <div>
+            <figure>
+                <img class="animatie" src="galerie/piano.jpg" alt="Piano">
+                <figcaption>Piano</figcaption>
+            </figure>
+            </div>
+
+            <div>
+            <figure>
+                <img class="animatie" src="galerie/trombone.jpg" alt="Trombone">
+                <figcaption>Trombone</figcaption>
+            </figure>
+            </div>
+
+            <div>
+            <figure class="o-treime">
+                <img class="animatie" src="galerie/violin.jpg" alt="Violin">
+                <figcaption>Violin</figcaption>
+            </figure>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>

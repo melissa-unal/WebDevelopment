@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include("../fragments/head.ejs")%>
+    <title>Minstrel's Streamer</title>
+
+    <script>
+        function f()
+        {
+          document.body.className= (document.body.className=="light") ? "dark" : "light";
+          var buton_background = document.getElementById("toggle_body_background");
+
+          if (buton_background.classList.contains("fa-sun"))
+          {
+            buton_background.classList.remove("fa-sun");
+            buton_background.classList.add("fa-moon");
+            return;
+          }
+          if (buton_background.classList.contains("fa-moon"))
+          {
+            buton_background.classList.remove("fa-moon");
+            buton_background.classList.add("fa-sun");
+            return;
+          }
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <%- include("../fragments/header.ejs")%>
+
+
+    <main class="main_index">
+        <br><br>
+
+        <section id="sectiunea1_img"><br><br>
+            <figure>
+                <img class="img_mare img_mediu" src="https://p0.pikrepo.com/preview/1021/667/stage-and-musicians.jpg" alt="Orchestra" title="Orchestra"/>
+                <!--<figcaption>Orchestra</figcaption>-->
+            </figure>
+
+        </section>
+
+        <section id="sectiunea1"><br><br>
+            <h2 id="despre_noi">Cum s-a nascut proiectul nostru? <span
+                    class="fas fa-music"></span>
+            </h2>
+
+            <div class="paragrafe">
+            <p title="para">
+                Aplicatia noastra web a luat nastere in data de <time datetime="2020-10-24">2020-10-24</time> si este
+                intr-o continua dezvoltare pentru a putea
+                oferi utilizatorilor nostri o experienta cat mai placuta alaturi de Minstrel's Stream.
+            </p>
+            </div>
+        </section>
+
+
+        <section id="sectiunea2_img"><br><br>
+            <figure>
+                <img class="img_mare img_mediu" src="imagini_continut/chopin.png" alt="Chopin" title="Chopin"/>
+                <!--<figcaption>Frédéric Chopin</figcaption>-->
+            </figure>
+        </section>
+
+        <section id="sectiunea2"><br><br>
+            <h2 id="ce_ne_propunem">Ce isi propune Minstrel's
+                Stream? <span class="far fa-file-audio"></span></h2>
+
+            <div class="paragrafe">
+            <p title="para">
+                Minstrel's Stream isi propune realizarea unei platforme perfecte care dispune de toti
+                <b>compozitorii</b> tai clasici preferati. Aici veti putea gasi compozitiile tuturor <b>artistilor</b>
+                care au <em>revolutionat</em> muzica <b>clasica</b>.
+            </p>
+            </div>
+        </section>
+
+        <br><br><br><br><br><br><br><br><br>
+        
+        <section id="sectiunea3_img"><br><br>
+            <figure>
+                <img class="img_mare img_mediu" src="imagini_continut/signup.jpg" alt="Signup" title="Signup"/>
+                <!--<figcaption>Creare cont</figcaption>-->
+            </figure>
+
+        </section>
+
+        <section id="sectiunea3"><br><br>
+            <h2 id="cum_functioneaza">Cum functioneaza aplicatia
+                noastra web? <span class="fas fa-compact-disc"></span></h2>
+                <div class="paragrafe">
+            <p title="para">
+                Primul lucru pe care trebuie sa il faceti este sa va creati un cont in baza noastra de date. Ulterior,
+                logati-va cu credentialele corespunzatoare
+                si veti fi redirectionat catre o noua pagina. Aceasta pagina va va propune nume de <b>artisti</b> pe
+                care ii puteti adauga in libaria dumneavoastra, iar
+                pentru fiecare <b>artist</b> veti avea toate <b>melodiile</b> compuse de acesta.
+            </p>
+            </div>
+        </section>
+        <br><br><br>
+
+        <section id="sectiunea4"><br><br>
+            <div class="scrollit">
+                <table>
+                    <colgroup>
+                        <col span="2" style="background-color: rgb(248, 169, 145)">
+                        <col style="background-color:red">
+                        <col style="background-color:rgb(248, 169, 145)">
+                      </colgroup>
+
+                    <caption id="tabel">Popularitatea compozitorilor clasici in America</caption>
+
+                    <thead>
+                        <tr>
+                            <th colspan="2">Nume artist</th>
+                            <th>Procent popularitate</th>
+                            <th>Tara provenienta</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+
+                        <tr>
+                            <td colspan="2">Ludwig van Beethoven</td>
+                            <td> 71% </td>
+                            <td rowspan="3"> Germania </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Johann Sebastian Bach</td>
+                            <td> 64% </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Johannes Brahms</td>
+                            <td> 50% </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Wolfgang Amadeus Mozart</td>
+                            <td> 66% </td>
+                            <td> Austria </td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="2">George Gershwin</td>
+                            <td> 53% </td>
+                            <td> S.U.A </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Frédéric Chopin</td>
+                            <td> 52% </td>
+                            <td> Polonia </td>
+                        </tr>
+
+                        <tr>
+                            <td>Pyotr Ilyich Tchaikovsky</td>
+                            <td>Пётр Ильи́ч Чайко́вский</td>
+                            <td rowspan="2" id="procent"> 47% </td>
+                            <td> Rusia </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Leonard Bernstein</td>
+                            <td> S.U.A </td>
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+            </div>
+        </section>
+
+        <!--<video controls width="500" height="500">
+          <source src="interviu_angela_gheorghiu.mp4" type="video/mp4">  
+            <track default label="Romanian" kind="captions" srclang="ro" src="subtitrari.vtt"/>
+        </video>-->
+        
+        <section id="sectiunea5"><br><br><br>
+            <div class="center">
+                <video class="vid_mare vid_mediu vid_mic" controls preload="metadata" src="video/interviu_angela_gheorghiu.mp4">
+                    <track default kind="subtitles" srclang="en"
+                        src="data:image/png;base64,V0VCVlRUDQoNCjENCjAwOjAwOjAwLjAwMCAtLT4gMDA6MDA6MDQuMDAwIGFsaWduOm1pZGRsZSBsaW5lOjANCkR1cGEgMjUgZGUgYW5pIGFtIHZydXQgc2EgZmFjIDxpPmFsdGNldmE8L2k+DQoNCjINCjAwOjAwOjA0LjAwMCAtLT4gMDA6MDA6MTIuMDAwIGFsaWduOm1pZGRsZSBsaW5lOjANCnBlbnRydSBjYSBzdGl0aSBmb2FydGUgYmluZSBjYSBhbSBvIGRpc2NvZ3JhZmllIGZvYXJ0ZSBtYXJlDQoNCjMNCjAwOjAwOjEyLjAwMCAtLT4gMDA6MDA6MTkuMDAwIGFsaWduOm1pZGRsZSBsaW5lOjANCnNpIGluIG9wZXJhLCBzaSBpbiByZWNpdGFsdXJpLCBzaSBpbiBjb25jZXJ0ZSwgc2kgaW4gdG9hdGUgZm9ybWVsZSBtdXppY2FsZSwgZGE/DQoNCjQNCjAwOjAwOjE5LjAwMCAtLT4gMDA6MDA6MjEuMDAwIGFsaWduOm1pZGRsZSBsaW5lOjANCnNpIGNoaWFyIHNpIGluIHZvY2FsLXNpbWZvbmljZSwgYnVuDQoNCjUNCjAwOjAwOjIxLjAwMCAtLT4gMDA6MDA6MzAuMDAwIGFsaWduOm1pZGRsZSBsaW5lOjANCnNpIG1pLWFtIGRvcml0IHNhIGZhYyA8aT5sZWFkLXVyaTwvaT4gaW4gbWFpIG11bHRlIGxpbWJpLCBwZW50cnUgY2ENCg0KNg0KMDA6MDA6MzAuMDAwIC0tPiAwMDowMDozMy4wMDAgYWxpZ246bWlkZGxlIGxpbmU6MA0KbnUgZXN0ZSBwcmltdWwgZGUgZmVsdWwgYXN0YS4NCg0KNw0KMDA6MDA6MzMuMDAwIC0tPiAwMDowMDozNi4wMDAgYWxpZ246bWlkZGxlIGxpbmU6MA0KQW0gbWFpIGZhY3V0IGRvdWEtdHJlaSBpbmFpbnRlLA0KDQo4DQowMDowMDozNi4wMDAgLS0+IDAwOjAwOjQ1LjAwMCBhbGlnbjptaWRkbGUgbGluZTowDQpkYXIgZGUgZmllY2FyZSBkYXRhIGwtYW0gZmFjdXQgY3UgdW4gYWNvbXBhbmlhdG9yLCBzaSBhbSB2cnV0IHVuIHBpYW5pc3QgY29uY2VydGlzdA0KDQo5DQowMDowMDo0NS4wMDAgLS0+IDAwOjAxOjAwLjAwMCBhbGlnbjptaWRkbGUgbGluZTowDQpzaSBhbSBhdnV0IG8gaW50YW1wbGFyZSBmZXJpY2l0YTogYW0gZm9zdCBzaSBzdWJpZWN0aXZhIHNpIG9iaWVjdGl2YSBpbiBhY2VsYXNpIHRpbXAsIGludGFsbmluZCBwZSBBbGV4YW5kcmEgRGFyaWVzY3UgbGEgTG9uZHJhLg0KDQoxMA0KMDA6MDE6MDAuMDAwIC0tPiAwMDowMTowNS4wMDAgYWxpZ246bWlkZGxlIGxpbmU6MA0KRWEgYSBzdHVkaWF0IGxhIExvbmRyYSBkZSBjYW5kIGVzdGUgbWljdXRhLCBkZWNpIGVzdGUgPGk+YnJpdGlzaDwvaT4uDQoNCjExDQowMDowMTowNS4wMDAgLS0+IDAwOjAxOjEyLjAwMCBhbGlnbjptaWRkbGUgbGluZTowDQpFIHVuIGZlbCBkZSAiY2FzYSBub2FzdHJhIi4NCg0KMTINCjAwOjAxOjEyLjAwMCAtLT4gMDA6MDE6MTcuMDAwIGFsaWduOm1pZGRsZSBsaW5lOjANCkV1IGRpbiBhbnVsIDE5OTAgc3VudCBhcHJvYXBlIGxvbmRvbmV6YSwgbnU/DQoNCjEzDQowMDowMToxNy4wMDAgLS0+IDAwOjAxOjI0LjAwMCBhbGlnbjptaWRkbGUgbGluZTowDQpNYSBsZWFnYSB0b3QgY2UgZXN0ZSBpbXBvcnRhbnQgZGluIHZpYXRhIG1lYSwgc2kgcGFydGljdWxhcmEsIHNpIHByb2Zlc2lvbmFsYS4=" />
+                </video>
+            </div> 
+        </section>
+        <section id="sectiunea6"><br><br>
+            <figure>
+                <picture>
+                    <source media="(min-width:1200px)" srcset="imagini_continut/rsz_piansrc1.jpg">
+                    <source media="(min-width:800px)" srcset="imagini_continut/rsz_piansrc2.jpg">
+                    <img src="imagini_continut/rsz_piano22.jpg" alt="Pian">
+                </picture>
+                <figcaption>Pian</figcaption>
+            </figure>
+            </section>
+
+
+
+
+
+    </main>
+
+    =
+    <%- include("../fragments/footer.ejs")%>
+
+
+
+</body>
+
+<div class="banner" id="bannerr" style="font-size: 15px;">
+    Acesta este un proiect scolar!!!
+</div>
+
+</html>

@@ -1,0 +1,257 @@
+body {
+  background-color: rgb(255, 214, 214);
+  counter-reset: section;
+  font-family: 'Caladea'; font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+h1 
+{
+background-image: url("../imagini_continut/piano2.jpg");
+transform: scaleX(1.25);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0% 100%;
+width: 100%;
+}
+
+
+
+.a {
+  font-style: italic;
+  background-color: rgb(255, 214, 214);
+}
+
+h2 {
+  margin-left: 150px;
+}
+
+[title="para"] {
+  margin-left: 100px;
+}
+
+.linie {
+  display: block;
+}
+.center 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+h2::before 
+{
+  counter-increment: section;
+  content:counter(section) ": ";
+}
+
+
+th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        td:empty {
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            empty-cells: show;
+        }
+
+
+        div.banner
+        {
+            position:fixed;
+            width:100%;
+            height:45px;
+            bottom: 0px;
+            right:0px;
+            left:0px;
+            text-align:center;
+            background-color: pink;
+            animation: vineStanga 10s linear 1 forwards;  
+        }
+
+  @keyframes vineStanga{
+      0%
+      {
+        background-color: rgb(255, 198, 132);
+        border: 3px solid rgb(255, 0, 0);
+        transform:translateX(-100%); 
+      }
+
+      25%  
+      {
+        background-color: rgb(255, 0, 0);
+        border: 3px solid rgb(255, 198, 132);
+      }
+
+      50%
+      {
+        transform:translateX(0vw);
+        background-color: rgb(255, 198, 132);
+        border: 3px solid rgb(255, 0, 0);
+      }
+      99.9%
+      {
+        opacity:1;
+        border: 3px solid rgb(255, 0, 0);
+      }
+      100%{opacity:0;}
+    }
+
+    .animatie
+    {
+        transition: transform .8s ease-in-out;
+    }
+    .animatie:hover 
+    {
+        border-radius: 50%;
+        transform: rotate(360deg) scale(1.5, 1.5);
+    }
+
+    video::cue 
+    {
+        background-color: white;
+        color: black;
+        position: relative;
+        text-align: center;
+    }
+
+    .center1 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+     
+
+    /*stilizare tabel*/
+
+ /*   table td:nth-child(odd) {
+      background-color: rgb(248, 169, 145);
+  }
+  
+    table td:nth-child(even) {
+      background-color: rgb(248, 24, 24);
+  }*/
+
+  table tr:hover td {
+    background-color: rgb(255, 149, 130);
+}
+
+  table tr:hover td[rowspan] {
+    background-color: rgb(255, 213, 200);
+}
+
+
+colgroup
+{
+  display: table-column-group;
+}
+
+/*buton de mers in susul paginii*/
+
+
+
+#link-top 
+{
+  position: fixed;
+  bottom: 3em;
+  opacity: 0.5;
+  left: 0.5em;
+  width: 2.5rem;
+  height: 2.75rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border: 3px solid rgb(248, 24, 24);
+  background: rgb(248, 169, 145);
+  text-decoration: none;
+  color: rgb(255, 214, 214);
+}
+
+#link-top:hover
+{
+  opacity: 1;
+  color: rgb(255, 82, 38);
+  border-color: rgb(255, 0, 0);
+}
+
+
+
+
+
+
+@media print
+{
+  .banner{
+      top: 0;
+      width:100%;
+      position:fixed;
+      animation: none;
+  }
+
+  nav{
+      display:none;}
+
+  video{
+      display:none;
+  }
+  body
+{
+  background: white;
+}
+}
+
+main
+{
+  font-size:1.3vw;
+}
+
+#sectiunea1_img {
+  width: 100%;
+  height: auto;
+}
+
+
+/*Light mode*/
+
+body.light
+{
+  --culoare-text: black;
+  --culoare-back: rgb(255, 214, 214);
+  --culoare-atentionare: magenta;
+  background:var(--culoare-back);
+}
+
+/*Dark mode*/
+
+body.dark
+{
+  --culoare-text: rgb(255, 214, 214);
+  --culoare-back: black;
+  --culoare-atentionare: pink;
+  background:var(--culoare-back);
+}
+
+h2, p, div, footer
+{
+  color: var(--culoare-text);
+  /* --albastru:blue; color:var(--albastru);*/
+}
+
+#toggle_body_background{
+  background-color: black;
+  color: rgb(255, 214, 214);
+  font-size: 20px;
+  padding: none;
+  margin: none;
+
+}
+

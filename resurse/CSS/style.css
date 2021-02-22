@@ -1,0 +1,440 @@
+#statica1
+{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px;
+}
+
+   #statica1 img
+   {
+     width: 100%;
+   }
+
+   #statica1 figcaption
+   {
+     text-align:center;
+   }
+   
+   
+   #statica1 figure:hover 
+   {
+     box-shadow: grey 0px 0px 7px;
+   }
+   
+   #statica1 figure
+   {
+     transition: all 1s linear;
+   }
+
+
+   #statica2
+{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px; /*!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+   #statica2 img
+   {
+     width: 100%;
+   }
+
+   #statica2 figcaption
+   {
+     text-align:center;
+   }
+   
+   
+   #statica2 figure:hover {
+     box-shadow: grey 0px 0px 7px;
+   }
+   
+   #statica2 figure
+   {
+     transition: all 1s linear;
+   }
+
+
+   #statica3
+{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px; /*!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+   #statica3 img
+   {
+     width: 100%;
+   }
+
+   #statica3 figcaption
+   {
+     text-align:center;
+   }
+   
+   
+   #statica3 figure:hover {
+     box-shadow: grey 0px 0px 7px;
+   }
+   
+   #statica3 figure
+   {
+     transition: all 1s linear;
+   }
+
+   label, .input_inline {
+    color:var(--culoare-text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   #aaa,#aaa *{
+    padding:0;
+    margin:0;
+    text-indent:0;
+  }
+
+  
+
+
+   nav{
+		width:100%;
+		position:fixed;
+    background: black;
+    height:3rem;
+    top:0px;
+    left:0px;
+    font-family:Arial, Helvetica, sans-serif;
+    z-index:20;
+	}
+  	ul.menu>li, ul.menu>li>ul.submenu>li{
+		display:block;		
+		font-size:1rem;
+		font-weight:bold;
+		height:3rem;
+		line-height:3rem;
+		text-align:center;		
+		list-style-type:none;    
+    background: black;
+    
+  }
+
+
+    #nu
+    {
+      text-shadow: 0px 0px 0px;
+    }
+    
+
+  @keyframes vineJos 
+  {
+      0% {transform: translateY(-900px); }
+      100% {transform: translateY(0px);}
+  }
+  @keyframes vineSus 
+  {
+      0% { transform: translateY(0);}
+      100% {transform: translateY(-900px); }
+  }
+
+
+
+
+
+     /*  div.exemplu0
+			{
+				background:pink;
+				transition: background 2s linear;				
+			}
+			div.exemplu0:hover
+			{
+				background:navy;
+      }	*/
+      
+  /*ul.menu>li a:hover
+  {
+    text-shadow: 0px 0px 5px white;
+    transition: all 0.5s linear;
+  }
+
+  ul.menu>li
+  {
+    text-shadow: 0px -40px 3px white;
+    overflow: hidden;
+
+  }*/
+
+  .shadow a:hover
+  {
+    text-shadow: 0px 0px 5px rgb(255, 214, 214);
+    transition: all 0.5s linear;
+  }
+
+  .shadow
+  {
+    text-shadow: 0px -40px 3px rgb(255, 214, 214);
+  }
+
+  
+  ul.menu>li>ul.submenu a:hover,ul.menu>li>ul.submenu label:hover
+  {
+    /*animation: in 0.5s forwards;*/
+    text-decoration: underline;
+    text-decoration-color:rgb(255, 214, 214);
+    transition: 1s;
+    
+  }
+
+  ul.menu>li>ul.submenu a,ul.menu>li>ul.submenu label
+  {
+   /* animation-play-state: paused;
+    animation: out 0.5s forwards;*/
+    text-decoration: underline;
+    text-decoration-color:black;
+  }
+
+
+
+
+  ul.menu>li{
+   float:left;
+	 width:10rem;
+	}
+  
+	ul.menu>li>ul.submenu{
+		position: relative;
+    top:0px;
+    width: 10rem;
+    transition: height 4s;
+
+  }
+  
+
+  /*.dropdown-content {
+    overflow: hidden:
+    height: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: all 1s ease-in;
+  }
+  .dropdown:hover .dropdown-content {
+    height: 200px; // sample height
+  }*/
+
+
+  
+
+  
+  ul.menu>li>a,ul.menu>li>label,ul.submenu>li>a{
+		display:block;
+		height:	100%;
+		text-decoration: none;
+		color: rgb(255, 214, 214);
+    transition:all 0.5s linear;
+    
+  }
+  
+
+
+  ul.menu a:hover,ul.menu label:hover{
+    background:rgba(255,255,255,0.5);
+  }
+
+  #hamburger{
+    display:none;
+    height:3rem;
+  }
+  #hamburger img{
+    height:100%;
+    width:auto;
+  }
+  #ch-menu, .ch-submenu{
+    display:none;
+  }
+  ul.submenu{
+    display:none;
+  }
+  .ch-submenu:checked~ul.submenu{
+    display:block;  
+
+  }
+
+
+
+
+  #casuta
+   {
+     display: none;
+  }
+
+
+  /*submeniu se lasa jos treptat*/
+  .ch-submenu:checked~ul.submenu{
+    display:block;  
+    overflow: hidden;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    animation-duration:0.3s;
+    animation-name:drop_submenu;
+    transform-origin:top;
+  }
+
+  @keyframes drop_submenu{
+    0% {transform: scaleY(0);} 
+    100%{transform: scaleY(1);}
+}
+
+
+
+#galerie_animata
+{
+  display: block;
+}
+
+
+/*layout pagina mare*/
+
+#sectiunea1
+{
+  grid-area: gr-sectiunea1;
+}
+
+#sectiunea1_img
+{
+  grid-area: gr-sectiunea1_img;
+}
+
+#sectiunea2
+{
+  grid-area: gr-sectiunea2;
+}
+
+#sectiunea2_img
+{
+  grid-area: gr-sectiunea2_img;
+}
+
+#sectiunea3
+{
+  grid-area: gr-sectiunea3;
+}
+
+#sectiunea3_img
+{
+  grid-area: gr-sectiunea3_img;
+}
+
+#sectiunea4
+{
+  grid-area: gr-sectiunea4;
+}
+
+#sectiunea5
+{
+  grid-area: gr-sectiunea5;
+}
+
+#sectiunea6
+{
+  grid-area: gr-sectiunea6;
+}
+
+
+
+
+.main_index
+{
+  /*box-shadow: inset lightgray 0px 0px 10px;*/
+    padding-right: 0;
+    padding-left: 0;
+   /* background: white;*/
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3,490px);
+    grid-template-areas: "gr-sectiunea1_img  gr-sectiunea2_img gr-sectiunea3_img" 
+                         "gr-sectiunea1       gr-sectiunea2    gr-sectiunea3 "
+                         ". . gr-sectiunea4"
+                         ". . gr-sectiunea5"
+                         ". . gr-sectiunea6";
+}
+.paragrafe
+{
+  margin-left:30px;
+}
+
+#sectiunea1
+{
+  margin-left: -100px;
+}
+
+#sectiunea2
+{
+  margin-left: -100px;
+}
+
+#sectiunea3
+{
+  margin-left: -100px;
+}
+
+
+#sectiunea4
+{
+  margin-left: -650px;
+}
+
+#sectiunea5
+{
+  margin-left: -1000px
+}
+
+#sectiunea6
+{
+  margin-left: -700px;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.img_mare
+{
+  width: 280px; 
+  height:250px; 
+  margin-left:50px;
+  border: solid black 2px;
+}
+
+.vid_mare
+{
+  width: 890px ;
+  height: 500px;
+}
+
+
+.input_fields label{
+  display:block;
+}
+
+div.inline label{
+  display:inline;
+}
+

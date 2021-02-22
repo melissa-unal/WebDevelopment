@@ -1,0 +1,35 @@
+#grid_carte {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+#grid_carte article {
+    background-color: rgb(255, 106, 193);
+    border: 2px solid rgb(255, 0, 0);
+}
+
+
+/*nth-child sau nth-of-type*/
+
+#grid_carte article:nth-child(8n+2),
+#grid_carte article:nth-child(8n+4),
+#grid_carte article:nth-child(8n+5),
+#grid_carte article:nth-child(8n+7) {
+    background-color: white;
+}
+
+.autor {
+    border: 1px solid rgb(235, 43, 75);
+    box-sizing: border-box;
+}
+
+#grid_carte article ul,
+p {
+    padding-left: 2em;
+    ;
+}
+
+span[class="nume"]:hover {
+    font-size: 1.2em;
+}

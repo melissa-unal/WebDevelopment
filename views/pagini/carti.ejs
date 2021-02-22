@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Carti</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/model2.css">
+    <script src="/scripturi/model2.js"></script>
+
+    <%- include("../fragments/head") %>
+
+</head>
+
+<body class="light">
+
+    <header>
+        <%- include("../fragments/header") %>
+    </header>
+
+    <main style=" background: var(--back-color);">
+        <div class="afisaj" style="padding-top: 100px; padding-bottom: 50px;">
+            <h1 style="color: rgb(139, 115, 139);">Carti</h1>
+
+            <select id="ordine">
+                <option value="asc">Ascendent</option>
+                <option value="desc">Descendent</option>
+            </select>
+            <button id="sorteaza">Sortează</button>
+
+            <div class="radio_model2"> Genuri: 
+                <label>Fantezie
+                    <input id="i_rad1_model2" name="gr_rad_model2" value="fantezie" type="radio" checked/>
+                </label>
+                <label>Stiinta
+                    <input id="i_rad2_model2" name="gr_rad_model2" value="stiinta" type="radio"/>
+                </label>
+                <label>Copii
+                    <input id="i_rad3_model2" name="gr_rad_model2" value="copii" type="radio"/>
+                </label>
+                <label>Matematica
+                    <input id="i_rad4_model2" name="gr_rad_model2" value="matematica" type="radio"/>
+                </label>
+        
+            </div>
+            
+            <button id="filtreaza_model2">Filtreaza</button>
+            <br>
+            <label>Autor Preferat
+                <input type="text" id="autor_preferat">
+            </label>
+            <button id="seteazaLocalStorage">Seteaza</button>
+
+            <form method="post" action="trimitemail_model2">
+                <label>Titlu carte
+                    <input type="text" name="titlu_carte">
+                </label>
+                <label>Email
+                    <input type="text" name="email_model2">
+                </label>
+                    <input type="submit" value="expediaza">
+            </form>
+            <!--
+            <p id="statistici"></p><button id="reseteazaLocalStorage">Resetează LocalStorage</button>
+            <input type="text" id="nume_elev">
+            <button id="filtreaza">Filtrează</button>
+
+            <form method="post" action="/trimiteMail">
+                <input type="text" name="email">
+                <input type="submit" value="Trimite Mail">
+            </form>
+        -->
+
+            <div id="grid_carte">
+                <% for (var i = 0; i < locals.carti.length; i++) { %>
+                    <article id="idcarte_<%=locals.carti[i].id%>">
+                        <h2>
+                            <span class="nume"><%= locals.carti[i].titlu %></span>
+                        </h2>
+                        <div class="autor">
+                            <%= locals.carti[i].autor %>
+                        </div>
+                        <p>
+                            <%= locals.carti[i].pret %>
+                        </p>
+                        <ul class="tematici">
+                            <% var tematici = locals.carti[i].tematici.split("#") %>
+                                <% for (var j = 0; j < tematici.length; j++) { %>
+                                    <li>
+                                        <%= tematici[j] %>
+                                    </li>
+                                    <% } %>
+                        </ul>
+                    </article>
+                    <% } %>
+            </div>
+        </div>
+    </main>
+
+    <footer style="position: absolute; z-index: 100; text-align: center; background-color: rgb(78, 48, 78); color: white; line-height: 20px; width: 100%;">
+        <%- include("../fragments/footer") -%>
+    </footer>
+
+</body>
+
+</html>

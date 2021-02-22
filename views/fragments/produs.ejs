@@ -1,0 +1,91 @@
+<article id="ent<%=locals.produs.id%>" class="<%=locals.produs.categorie%>">
+    <br><h3>Nume:<a href="/produs/<%=locals.produs.id%>"><%=locals.produs.nume_melodie%></a></h3>
+<p>Gen:<span class="gen_muzical"><%=locals.produs.gen_muzical%></span></p>
+<div style="float:right"><img src="<%=produs.imagine%>" alt="<%=produs.nume_melodie%>"/></div>
+<br>
+<div style="margin-right:700px;">
+<table style="width:100%">
+    <colgroup>
+        <col style="background-color: rgb(248, 169, 145)">
+        <col style="background-color:red">
+        <col style="background-color:rgb(248, 169, 145)">
+        <col style="background-color:red">
+        <col style="background-color:rgb(248, 169, 145)">
+        <col style="background-color:red">
+        <col style="background-color:rgb(248, 169, 145)">
+      </colgroup>
+
+    <caption id="tabel">Tabel informatii</caption>
+
+    <thead>
+        <tr>
+            <th>Nume melodie</th>
+            <th>Durata melodiei</th>
+            <th>Nume artist</th>
+            <th>Instrumente</th>
+            <th>Data publicare</th>
+            <th>Sexul artistului</th>
+            <th>Genul muzical</th>
+        </tr>
+
+        
+
+    </thead>
+
+    <tbody>
+
+
+        <tr>
+            <td class="nume_melodie"><%=locals.produs.nume_melodie%></td>
+            <td class="durata_melodiei"><%=locals.produs.durata_melodiei%></td>
+            <td class="nume_artist"><%=locals.produs.nume_artist%></td>
+            <td class="instrumente"><%=locals.produs.instrumente%></td>
+
+            <% var luna = locals.produs.data_publicare.getMonth();
+            var zi = locals.produs.data_publicare.getDate();
+            var zi_sapt = locals.produs.data_publicare.getDay();
+            var an = locals.produs.data_publicare.getFullYear(); 
+            var lunile_anului = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+            var zilele_saptamanii = ['Duminica', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata']; 
+            var data_formatata = zi+'/'+lunile_anului[luna]+'/'+an +"("+zilele_saptamanii[zi_sapt]+")";  
+            var data_time = an + '-' + luna + '-' +zi; 
+         console.log(data_time)
+         %>
+
+            <td class="data_publicare"><time datetime="<%=data_time%>"><%=data_formatata%></time></td>
+            <td class="sex_artist"><%=locals.produs.sex_artist%></td>
+            <td class="gen_muzical"><%=locals.produs.gen_muzical%></td>
+        </tr>
+
+
+
+
+
+    </tbody>
+
+
+</table>
+</div>
+<br>
+<div style="margin-right:700px"><p class="descriere"><%=locals.produs.descriere%></p></div><br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</article>

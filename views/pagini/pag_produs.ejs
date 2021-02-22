@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<%- include("../fragments/head.ejs") %>
+	<title>Produs</title>
+</head>
+<body>
+
+<%- include("../fragments/header.ejs") %>
+
+<main>
+<h2>Produs unic</h2>
+
+	<p>Nume din pag_produs:<%= locals.produs_unic.nume%></p>
+	<%- include("../fragments/produs.ejs",{produs:locals.produs_unic}) %>
+
+</main>
+
+<%- include("../fragments/footer.ejs") %>
+</body>
+</html>

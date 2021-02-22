@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<title>Inregistrare utilizator</title>
+
+    <%- include("../fragments/head") %>
+</head>
+<body class="container">
+
+<header>
+	<%- include("../fragments/header") %>
+</header>
+
+<main>
+    <div class="afisaj">
+        <h1>Inregistrare utilizator</h1>
+        
+		</p>
+		<% if (locals.err !="") { %>
+		<form method="post" class="date"  action="/inreg" id="inregistrare" enctype="multipart/form-data" onsubmit = "return verifica_campuri()" >
+			<p>
+			<label>
+				Username: <input id = "username1" type="text" name="username"  value="" required>
+			</label>
+			</p>
+			<p>
+			<label>
+				Nume: <input id = "nume1" type="text" name="nume" value="" required>
+			</label>
+			</p>
+			<p>
+			<label>
+				Prenume: <input id = "prenume1" type="text" name="prenume" value="" required>
+			</label>
+			</p>
+			<p>
+			<label>
+				Parola: <input id = "parola1" type="password" name="parola" value="" required>
+			</label>
+			</p>
+			<p>
+			<label>
+				Reintroduceti parola: <input id = "rparola1" type="password" name="rparola" value="" required>
+			</label>
+			</p>
+			<p>
+			<label>
+				Email: <input id = "email1" type="text" name="email" value=""  size="50" required>
+			</label>
+			</p>
+			<p>
+			
+			<label>
+				Poza: <input type="file" name="poza">
+			</label>
+			</p>
+			<p>		
+				<input type="submit" value="Trimite">
+				<input type="reset" value="Reseteaza">
+			</p>
+		</form>
+	<% } %>
+	<%- (locals.raspuns?locals.raspuns:"")+"<br/>"+(locals.err?locals.err:"")%>
+
+    </div>
+</main>
+
+<footer>
+    <%- include("../fragments/footer") %>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+	<%- include("../fragments/head.ejs") %>
+	<title>Produse</title>
+</head>
+<body>
+	
+
+<%- include("../fragments/header.ejs") %>
+
+<main>
+
+<section class="input_fields">
+	<label> Nume melodie: 
+        <input id="i_text" type="text" value="">
+	</label>
+
+	<label for="i_range"> Durata melodiei: 0
+        <input id="i_range" type="range" min="0" max="10000" step="2" value="10000"> 10000 (selectat: <span id="info_range">10000</span>)
+    </label>
+	
+	<div class="inline"> Genuri: 
+        <label>Nocturna
+            <input id="i_rad1" name="gr_rad" value="Nocturna" type="radio"/>
+        </label>
+        <label>Simfonie
+            <input id="i_rad2" name="gr_rad" value="Simfonie" type="radio"/>
+        </label>
+        <label>Balet
+            <input id="i_rad3" name="gr_rad" value="Balet" type="radio"/>
+        </label>
+        <label>Poloneza
+            <input id="i_rad4" name="gr_rad" value="Poloneza" type="radio"/>
+        </label>
+        <label>Sonata
+            <input id="i_rad5" name="gr_rad" value="Sonata" type="radio"/>
+		</label>
+		<label>Nimic
+			<input id="i_rad6" checked name="gr_rad" value="nimic" type="radio"/>
+		</label>
+
+	</div>
+	
+	<div class="inline">
+
+
+		<label>Artisti de sex feminin
+
+			<input id="i_bool1" name="gr_chck" checked value="" type="checkbox" />
+
+		</label>
+
+		<label>Artisti de sex masculin
+
+			<input id="i_bool0" name="gr_chck" checked value="" type="checkbox" />
+
+		</label>
+
+	</div>
+
+		<label>Descrierea:
+			<textarea id="i_textarea"></textarea>
+		</label>
+	 
+		<label>
+			<select id="i_sel_simplu">
+				<option value="Nimic" selected>Nimic</option>
+				<option value="Frédéric François Chopin">Frédéric François Chopin</option>
+				<option value="Felix Mendelssohn">Felix Mendelssohn</option>
+				<option value="Pyotr Ilyich Tchaikovsky" >Pyotr Ilyich Tchaikovsky</option>
+				<option value="Clara Schumann">Clara Schumann</option>
+				<option value="Fanny Mendelssohn">Fanny Mendelssohn</option>
+			</select>
+		</label>
+	 
+	 
+		<label>Select multiplu:
+			<select id="i_sel_multiplu" multiple size="5">
+				<option value="pian" selected>pian</option>
+				<option value="flaut" selected>flaut</option>
+				<option value="oboi" selected>oboi</option>
+				<option value="clarinet" selected>clarinet</option>
+				<option value="corn" selected>corn</option>
+				<option value="trompeta" selected>trompeta</option>
+				<option value="trombon" selected>trombon</option>
+				<option value="timpan" selected>timpan</option>
+				<option value="bas" selected>bas</option>
+				<option value="vioara" selected>vioara</option>
+				<option value="violoncel" selected>violoncel</option>
+				<option value="bas" selected>bas</option>
+				<option value="harpa" selected>harpa</option>
+				<option value="piculina" selected>piculina</option>
+			</select>
+		</label>
+
+		<script src="scripturi/sortari.js"></script>
+
+		<%
+			var nume_melodii = [];
+			for(let i=0;i<locals.produse.length;i++){
+				nume_melodii.push(locals.produse[i].nume_melodie);
+				
+			}
+		console.log(nume_melodii);
+		%>
+
+		<button id="filtrare">Filtreaza</button>
+		<button id="sort_asc">Sortare crescatoare</button>
+		<button id="sort_desc">Sortare descrescatoare</button>
+		<button id="average">Medie durata melodii</button>
+		<button id="reset_filter">Reset</button>
+
+	<section id="gr-prod">
+		<%for(let i=0;i<locals.produse.length;i++){%>
+			<%- include("../fragments/produs.ejs",{produs:locals.produse[i]}) %>
+		<%}%>
+	</section>
+	
+
+
+
+</section>
+
+
+
+	
+
+
+</main>
+
+<%- include("../fragments/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<title>Extraterestri</title>
+	<link rel="stylesheet" type="text/css" href="/CSS/extraterestri.css" />
+    <%- include("../fragments/head") %>
+
+</head>
+<body class="container">
+
+<header>
+    <%- include("../fragments/header") %>
+</header>
+
+<main>
+    <div class="afisaj">
+
+		<h1>Extraterestri</h1>
+
+		<div class="butoane_rad"> Tematici:
+
+			<label>Ascendent
+				<input id="i_rad1" name="gr_radio" value="ascendent" type="radio" checked/>
+			</label>
+
+			<label>Descendent
+				<input id="i_rad2" name="gr_radio" value="descendent" type="radio"/>
+			</label>
+
+		</div>
+
+		<button id="sorteaza">Sorteaza</button>
+
+				<p>
+					<input type="text" id="planeta_input">
+					<button id="filtreaza_planeta">filtreaza</button>
+				</p>
+
+
+		<div id="gr_extraterestri">
+
+		  <% for (var i = 0; i < locals.extraterestri.length; i++) { %>
+			<section>
+
+				<h2> <%= locals.extraterestri[i].nume%></h2>
+				<div>
+					<%= locals.extraterestri[i].specie%>
+				</div>
+
+				<p>
+					<%= locals.extraterestri[i].varsta%>
+				</p>
+
+				<ul class="planeta">
+					<% var planete= locals.extraterestri[i].planete_vizitate.split(";") %>
+                    <% for (var j = 0; j < planete.length; j++) { %>
+						<li>
+							<%= planete[j] %>
+						</li>
+					<% } %>
+				</ul>
+
+			</section>
+		  <% } %>
+		</div>
+
+
+	</div>
+</main>
+
+<footer>
+	<%- include("../fragments/footer.ejs") %>
+</footer>
+
+</body>
+</html>
